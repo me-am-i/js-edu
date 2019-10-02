@@ -15,8 +15,8 @@ module.exports = function getTimeForEducation(
       
       if (knowsProgramming) {
         
-          //  const hoursWithFocus = hoursForKnowsProgramming / config[focus];
-          //  return Math.ceil(hoursWithFocus);
+            const hoursWithFocus = hoursForKnowsProgramming / config[focus];
+            return Math.ceil(hoursWithFocus);
       }
        
       else {
