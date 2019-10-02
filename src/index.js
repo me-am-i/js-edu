@@ -10,15 +10,21 @@ module.exports = function getTimeForEducation(
     config = {family: 4}
     ) {
 
+     const hoursForKnowsProgramming = 800;
+     const hoursForDoNotKnowsProgramming = hoursForKnowsProgramming + 500;
       
-       const general = 800 / config[focus];
-
-
-       return Math.ceil(general);
-      
-     //  console.log(focus, knowsProgramming, config, general); //debug
-      //return 0;
-
-      
+      if (knowsProgramming) {
+        
+            const hoursWithFocus = hoursForKnowsProgramming / config[focus];
+            return Math.ceil(hoursWithFocus);
+      }
+       
+      else {
+              
+        const hoursWithFocus = hoursForDoNotKnowsProgramming / config[focus];
+        return Math.ceil(hoursWithFocus);
+                  
+      }
+          
   };
   
